@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1.0" name="viewport" />
+		<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+		<style type="text/css">
+		.playbox{ height: 300px; position: relative; width: 300px; background: red; overflow: hidden; }
+		.playbox img{ position: absolute; left: 0px; top: 0px; }
+		</style>
+	</head>
+	<body>
+		<div class="playbox">
+			<!-- <img src="./ld05.png" alt="" width="100" height="88" class="img target"> -->
+		</div>
+
+		<div><span class="scale"><a href="javascript:;">缩放</a></span> <span class="rotate"><a href="javascript:;">旋转</a></span> <span class="drag"><a href="javascript:;">拖拽</a></span></div>
+
+		<div class="game_save">
+			<a href="javascript:;">保存我的搭配</a>
+		</div>
+		<div class="clothes_item">
+			<img src="./ld05.png" alt="" width="50" height="38" class="img">
+			<img src="./ld03.png" alt="" width="50" height="68" class="img">
+			<img src="http://7xokcs.com2.z0.glb.qiniucdn.com/illus_teacher_access.png"  class="img" alt="">
+		</div>
+
+		<div id="logger"></div>
+		<!-- <img src="./ld05.png" alt="" width="50" height="38" class="img"> -->
+		<!-- <script type="text/javascript" src="hijs.js"></script> -->
+    	<script type="text/javascript" src="touch.min.js"></script>
+    	<script type="text/javascript" src="demo-drag.js"></script>
+		
+		<script src="save.js"></script>
+	</body>
+</html>
