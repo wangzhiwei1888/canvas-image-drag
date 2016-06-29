@@ -44,13 +44,14 @@
 				log("双指放大与缩小目标.");
 
 				// var target = $(".target");
-				// target.style.webkitTransition = 'all ease 0.05s';
+				
 				var width = 0;
 				var height = 0;
 				touch.on('.target', 'touchstart', function(ev) {
 
 					width = this.width;
 					height = this.height;
+					this.style.transition = 'all ease 0.05s';
 					ev.preventDefault();
 				});
 
@@ -69,7 +70,8 @@
 					// alert(target.width);
 					this.style.width = width*currentScale + 'px';
 					this.style.height = height*currentScale + 'px';
-
+					this.style.left = parseInt(this.style.left) - width*currentScale/2 + 'px'
+					this.style.top = parseInt(this.style.top) - height*currentScale/2 + 'px'
 
 					log("当前缩放比例为:" + currentScale + ".");
 				});
@@ -110,6 +112,7 @@
 
 					if(parseInt(this.style.left) < -(this.width/2))
 					{
+						// alert(1)
 						$(this).remove();
 					}
 					if(parseInt(this.style.left) > $('.playbox').width()-(this.width/2))
